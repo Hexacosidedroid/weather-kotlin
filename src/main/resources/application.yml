@@ -1,0 +1,4 @@
+city: "Rostov-on-Don"
+key: "ad9c2421aa366de44dcbdc0ce43419d7"
+
+#api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
