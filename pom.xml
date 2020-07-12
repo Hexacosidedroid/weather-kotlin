@@ -9,9 +9,9 @@
 		<relativePath/>
 	</parent>
 	<groupId>ru.cib</groupId>
-	<artifactId>weather-api</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
-	<name>weather-api</name>
+	<artifactId>weather-kotlin</artifactId>
+	<version>0.0.3-SNAPSHOT</version>
+	<name>weather-kotlin</name>
 
 	<properties>
 		<java.version>11</java.version>

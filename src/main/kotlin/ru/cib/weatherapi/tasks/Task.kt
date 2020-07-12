@@ -33,6 +33,6 @@ class Task(
                         city,
                         key
                 )
-        val result = weatherHistoryRepository.save(restTemplate.body?.toDatabaseDomain())
+//        val result = weatherHistoryRepository.save(restTemplate.body?.toDatabaseDomain())
     }
 }
