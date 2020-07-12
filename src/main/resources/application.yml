@@ -1,6 +1,13 @@
 spring:
   application:
     name: weather-kotlin
+  datasource:
+    driverClassName: "org.sqlite.JDBC"
+    url: "jdbc:sqlite:/src/main/resources/SQLiteDB/Weather_history.db"
+    username: ""
+    password: ""
+  main:
+    banner-mode: off
 
 city: "Rostov-on-Don"
 key: "ad9c2421aa366de44dcbdc0ce43419d7"

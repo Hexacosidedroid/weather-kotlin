@@ -1,7 +1,7 @@
 package ru.cib.weatherapi.controllers
 
 import org.springframework.web.bind.annotation.*
-import ru.cib.weatherapi.service.WeatherService
+import ru.cib.weatherapi.services.WeatherService
 
 @RestController
 class WeatherController(

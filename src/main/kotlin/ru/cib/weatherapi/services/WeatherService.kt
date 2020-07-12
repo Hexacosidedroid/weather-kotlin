@@ -1,4 +1,4 @@
-package ru.cib.weatherapi.service
+package ru.cib.weatherapi.services
 
 import mu.KotlinLogging
 import org.springframework.beans.factory.annotation.Value
