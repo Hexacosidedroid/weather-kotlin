@@ -7,6 +7,7 @@ import org.springframework.http.HttpMethod
 import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Service
 import org.springframework.web.client.RestTemplate
+import ru.cib.weatherapi.dto.CurrentWeatherResponse
 
 private val logger = KotlinLogging.logger {}
 
@@ -19,13 +20,13 @@ class Task {
     val key: String? = null
 
 //    @Scheduled(fixedDelay = 600000L)
-    fun getCurrentWearher(): String? {
+    fun getCurrentWearher(): CurrentWeatherResponse? {
         val httpEntity = HttpEntity.EMPTY
         val restTemplate = RestTemplate()
                 .exchange("https://api.openweathermap.org/data/2.5/weather?q={city}&appid={key}",
                         HttpMethod.GET,
                         httpEntity,
-                        String::class.java,
+                        CurrentWeatherResponse::class.java,
                         city,
                         key
                 )
