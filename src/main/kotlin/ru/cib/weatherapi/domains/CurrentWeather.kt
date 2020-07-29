@@ -5,7 +5,7 @@ import java.util.*
 import javax.persistence.*
 
 @Entity
-@Table(name = "rostov_weather_history")
+@Table(name = "Weather_history")
 data class CurrentWeather (
         @field:Id
         @field:GeneratedValue(strategy= GenerationType.AUTO)

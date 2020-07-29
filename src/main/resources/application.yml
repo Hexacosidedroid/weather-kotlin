@@ -2,10 +2,16 @@ spring:
   application:
     name: weather-kotlin
   datasource:
-    driverClassName: "org.sqlite.JDBC"
-    url: "jdbc:sqlite:/src/main/resources/SQLiteDB/Weather_history.db"
+    driverClassName: org.sqlite.JDBC
+    url: "jdbc:sqlite:/home/viacheslav/IdeaProjects/weather-kotlin/src/main/resources/Weather.db"
     username: ""
     password: ""
+  jpa:
+#    hibernate:
+#      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLiteDialect
   main:
     banner-mode: off
 

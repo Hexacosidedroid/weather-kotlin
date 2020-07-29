@@ -19,12 +19,13 @@ class Task(
 ) {
     @Value("\${city}")
     val city: String? = null
+
     @Value("\${key}")
     val key: String? = null
 
-    //    @Scheduled(fixedDelay = 60000L)
     @Scheduled(cron = "0 0/10 * * * ?")
     fun getCurrentWeather() {
+        logger.debug("starting task")
         val restTemplate = RestTemplate()
                 .exchange("https://api.openweathermap.org/data/2.5/weather?q={city}&appid={key}",
                         HttpMethod.GET,
@@ -33,6 +34,9 @@ class Task(
                         city,
                         key
                 )
-//        val result = weatherHistoryRepository.save(restTemplate.body?.toDatabaseDomain())
+        logger.debug("received response ${restTemplate.body}")
+        val weather = restTemplate.body?.toDatabaseDomain()
+        logger.debug("saving response")
+        weatherHistoryRepository.save(weather!!)
     }
 }
