@@ -6,4 +6,5 @@ import ru.cib.weatherapi.domains.CurrentWeather
 
 @Repository
 interface WeatherHistoryRepository : JpaRepository<CurrentWeather, Long> {
+    fun findTopByOrderByIdDesc(): CurrentWeather
 }

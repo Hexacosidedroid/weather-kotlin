@@ -1,19 +1,28 @@
 spring:
   application:
     name: weather-kotlin
+#  mail:
+#    default-encoding: UTF-8
+#    host: smtp.gmail.com
+#    port: 465
+#    username: ""
+#    password: "sialqpajiymsdezi"
   datasource:
     driverClassName: org.sqlite.JDBC
-    url: "jdbc:sqlite:/home/viacheslav/IdeaProjects/weather-kotlin/src/main/resources/Weather.db"
+    url: "jdbc:sqlite:src/main/resources/Weather.db"
     username: ""
     password: ""
   jpa:
-#    hibernate:
-#      ddl-auto: create
+    hibernate:
+      ddl-auto: create
     properties:
       hibernate:
         dialect: org.hibernate.dialect.SQLiteDialect
   main:
     banner-mode: off
+
+server:
+  port: 8091
 
 city: "Rostov-on-Don"
 key: "ad9c2421aa366de44dcbdc0ce43419d7"
