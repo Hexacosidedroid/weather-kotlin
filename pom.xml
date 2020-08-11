@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>ru.cib</groupId>
 	<artifactId>weather-kotlin</artifactId>
-	<version>0.0.5-SNAPSHOT</version>
+	<version>0.0.5.1-SNAPSHOT</version>
 	<name>weather-kotlin</name>
 
 	<properties>
